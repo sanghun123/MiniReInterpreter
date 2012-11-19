@@ -1,0 +1,26 @@
+Program Flow
+read lexical specification -> LL(1) parser create a LL(1) parsing table -> read MiniRE script -> create Abstract Syntax Tree -> walk the AST and execute commands (may read&write text file(s)).
+
+There are 4 parts:
+1. scanner & Execute Mini-Re keywords		Sanghun Oh
+2. LL(1) parser								NAME
+3. AbstractSyntaxTree						NAME
+4. StateTable & SymbolTable					NAME
+
+
+1.
+read & write files (MiniRE script, Lexical Specification, text files).
+execute commands: begin end  ID  =  replace with in ; recursivereplace  >!  print ( )  ,  # find diff   union inters maxfreqstring 
+
+2.
+read lexical specification.
+use LL(1) parser to convert any LL(1) grammar into a LL(1) parsing table.
+
+3.
+get LL(1) parsing table and create Abstract Syntax Tree.
+<MiniRE-program> <statement-list> <statement> <statment-list-tail> <exp> epsilon ID REGEX ASCII-STR Mini-Re keywords
+
+
+4.
+create StateTable & SymbolTable (stack for LL(1) parser)
+
